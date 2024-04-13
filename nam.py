@@ -24,13 +24,10 @@ def test_counter_displayed_and_screenshot():
         page = browser.new_page()
         page.goto("https://www.avito.ru/avito-care/eco-impact")
 
-        # Находим div с классом "desktop-wrapper-OutiE"
         target_div = page.locator(".desktop-wrapper-OutiE")
 
-        # Проверяем, что div отображается на странице
         assert target_div.is_visible()
 
-        # Делаем скриншот всего div
-        target_div.screenshot(path="./output/counter_div.png")
+        target_div.screenshot(path="./output/test-case-4.png")
 
         browser.close()
